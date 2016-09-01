@@ -12,8 +12,8 @@
     "stats": "webpack --profile --json > stats.json",
     "lint": "eslint . --ext .js --ext .jsx --ext .es6 --ignore-path .gitignore --cache",
     "patch": "npm version patch",
-    "test": "karma start",
-    "test:browser": "webpack-dev-server"
+    "test": "cross-env NODE_ENV=test karma start",
+    "test:browser": "cross-env NODE_ENV=test webpack-dev-server"
   },
   "keywords": [],
   "author": "Adrian Henry",
@@ -24,6 +24,7 @@
     "babel-core": "^6.14.0",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.5",
+    "babel-plugin-istanbul": "^2.0.0",
     "babel-preset-es2015": "^6.14.0",
     "browser-sync-webpack-plugin": "^1.1.2",
     "chai": "^3.5.0",
